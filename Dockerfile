@@ -1,14 +1,12 @@
-FROM node:8
+FROM nodejs:8-RHOAR
 
 # Create app directory
-WORKDIR /usr/src/app
+WORKDIR /app
 
-COPY package*.json ./
+COPY package.json /app
 
 RUN npm install
 
-COPY . .
+COPY . /app
 
-EXPOSE 8085
-
-CMD ["node", "main.js"]
+CMD ["npm", "start"]
