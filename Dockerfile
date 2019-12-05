@@ -1,5 +1,6 @@
 FROM nodejs:8-RHOAR
-
+# FROM node:8 - for docker hub containers. 
+ 
 # Create app directory
 WORKDIR /app
 
